@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = CucumberPeel::VERSION
   spec.authors       = ["Justin Searls"]
   spec.email         = ["searls@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Helps you locate the implementation for a given step}
+  spec.summary       = %q{Provides a CLI to search a project's step implementations for a given step example}
+  spec.homepage      = "https://github.com/testdouble/cucumber-peel"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "cucumber", "~> 1.2"
+  spec.add_dependency 'thor', '~> 0.14'
+
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
