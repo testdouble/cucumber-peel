@@ -2,7 +2,7 @@
 
 The indirection between gherkin in feature files and the location of step implementations (located in any arbitrarily named file and obfuscated by regex patterns) can be a moderate productivity drain when searching for the implementation of a given step.
 
-This isn't much of a problem when your cucumber feature has a fast runtime, because Cucumber's default reporter prints the step implementation location in the margin, but running the entire feature to find out where a step lives can be quite cumbersome features
+This isn't much of a problem when your cucumber feature has a fast runtime, because Cucumber's default reporter prints the step implementation location in the margin, but running the entire feature to find out where a step lives can be quite cumbersome when your feature is very slow.
 
 ## installation
 
