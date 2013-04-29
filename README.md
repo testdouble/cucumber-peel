@@ -4,7 +4,7 @@ The indirection between gherkin in feature files and the location of step implem
 
 This isn't much of a problem when your cucumber feature has a fast runtime, because Cucumber's default reporter prints the step implementation location in the margin, but running the entire feature to find out where a step lives can be quite cumbersome when your feature is very slow.
 
-## installation
+## usage
 
 Start by adding cucumber-peel to your Gemfile (probably in a development group)
 
