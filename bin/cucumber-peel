@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
+require 'ruby-debug'; debugger; 2;
 
 require 'cucumber_peel'
 require "cucumber_peel/cli"
+
 
 CucumberPeel::Cli.start(ARGV)
