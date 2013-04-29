@@ -1,29 +1,26 @@
-# CucumberPeel
+# cucumber-peel
 
-TODO: Write a gem description
+The indirection between gherkin in feature files and the location of step implementations (located in any arbitrarily named file and obfuscated by regex patterns) can be a moderate productivity drain when searching for the implementation of a given step.
 
-## Installation
+This isn't much of a problem when your cucumber feature has a fast runtime, because Cucumber's default reporter prints the step implementation location in the margin, but running the entire feature to find out where a step lives can be quite cumbersome features
 
-Add this line to your application's Gemfile:
+Here's how you use cucumber-peel
 
-    gem 'cucumber-peel'
+```
+$ gem install cucumber-peel
+$ cd my_project_root
+$ bundle exec cucumber-peel
+```
 
-And then execute:
+This will start a very simple REPL-like interface into which you can paste gherkin steps as you find them in your feature files.
 
-    $ bundle
+```
+Using the default profile...
 
-Or install it yourself as:
+Cucumber runtime loaded. Enter steps to search for.
+> I am on the history reports page
+/Users/justin/code/my_app/features/step_definitions/web_steps.rb:24
+>
+```
 
-    $ gem install cucumber-peel
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+And then you can just hit Ctrl-C or type "exit" to quit.

@@ -16,8 +16,10 @@ module CucumberPeel
       end
     end
 
-    def find_step(runtime, name)
-      runtime.step_match(step_name).file_colon_line
+    def find_cucumber_step(runtime, name)
+      runtime.step_match(name).file_colon_line
+    rescue
+      "No step found: #{name}"
     end
   end
 end
